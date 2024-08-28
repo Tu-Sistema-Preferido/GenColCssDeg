@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Fondos CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Fondos CSS degradados</h1>
+        <br>
+        <div class="controls">
+            <label for="color1">Color 1:</label>
+            <input type="color" id="color1" value="#ff0000">
+
+            <label for="color2">Color 2:</label>
+            <input type="color" id="color2" value="#0000ff">
+
+            <label for="color3">Color 3:</label>
+            <input type="color" id="color3" value="#00ff00">
+
+            <label for="color4">Color 4:</label>
+            <input type="color" id="color4" value="#ffff00">
+
+            <label for="direction">Dirección:</label>
+            <select id="direction">
+                <option value="to right">Horizontal</option>
+                <option value="to bottom">Vertical</option>
+                <option value="to top right">Diagonal</option>
+                <option value="circle">Radial</option>
+            </select>
+
+            <label for="shape">Forma:</label>
+            <select id="shape">
+                <option value="ellipse">Elipse</option>
+                <option value="circle">Círculo</option>
+                <option value="polygon">Polígono</option>
+                <option value="diamond">Diamante</option>
+            </select>
+        </div>
+
+        <div class="preview">
+            <h2>Vista Previa</h2>
+            <br>
+            <div class="output"></div>
+        </div>
+
+        <div class="code">
+            <h2>Código CSS</h2>
+            <br>
+            <pre id="css-code"></pre>
+            <button id="copy-btn">Copiar CSS</button>
+        </div>
+
+        <!-- Alerta personalizada -->
+        <div id="custom-alert" class="alert hidden">
+            ¡Código CSS copiado al portapapeles!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

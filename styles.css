@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top right, #ff0000, #000000, #ff0000, #000000); clip-path: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2{
+    color: #FFFFFF;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls input,
+.controls select {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.preview {
+    margin-bottom: 20px;
+}
+
+.preview .output {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+.code {
+    position: relative;
+}
+
+.code pre {
+    background-color: #272822;
+    color: #fff;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+#copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #B62965;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#copy-btn:hover {
+    background-color: #89395c;
+    transform: scale(0.95);
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.alert.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alert.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@media (max-width: 600px) {
+    .container{
+      width: 100%;
+    }
+    h1{
+      font-size: 20px;
+    }
+    .controls{
+      width: 70%;
+      display: table-row-group;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+    }
+    .color1, .color2, .color3, .color4 {
+      width: 50%;
+      align-items: center;
+    }
+}
